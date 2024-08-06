@@ -14,4 +14,4 @@ done
 # Allow C99 features, disallow C11 features. The "-D_XOPEN_SOURCE=500" defines ftruncate().
 CC_OPTS="-std=c99 -pedantic-errors -Wall -Wextra -D_XOPEN_SOURCE=500"
 
-gcc $CC_OPTS -o persistent_state persistent_state.c; if [ $? -ne 0 ]; then exit 1; fi
+gcc $CC_OPTS -o persistent_state persistent_state.c -lrt; if [ $? -ne 0 ]; then exit 1; fi
